@@ -1,0 +1,1 @@
+La integración Wokwi MQTT sigue usando SJL-001 y el mismo topic de la V2. Puede conservar su sketch/diagram de Wokwi V2.

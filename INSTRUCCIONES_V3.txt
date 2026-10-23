@@ -1,0 +1,28 @@
+ENERGIA MUNICIPAL 360 — V3 NEGOCIO
+
+CAMBIOS:
+- Administración: 10 / 20 / 30 nodos POR DISTRITO.
+  Totales: 100 / 200 / 300 nodos.
+- Primeros 10 nodos de cada distrito:
+  puntos públicos reales o zonas estratégicas de referencia.
+- Nodos adicionales 11-30:
+  infraestructura municipal simulada, talleres/depósitos de referencia y
+  "ubicaciones reservadas — consumo atípico simulado".
+- NO se acusa a un local real de robo de energía.
+- Los puntos sintéticos de riesgo sirven para demostrar cómo el sistema
+  prioriza inspecciones por patrones anómalos.
+- Posiciones del mapa son referenciales dentro del distrito.
+
+IMPORTANTE:
+"Principal consumidor" se interpreta como punto de alta demanda POTENCIAL /
+infraestructura significativa para el ejercicio, no como ranking real de
+consumo eléctrico de la empresa distribuidora.
+
+EJECUCIÓN:
+1) Reemplace core.py, dashboard.py y mqtt_bridge.py.
+2) Copie requirements.txt y RESET_BASE.py.
+3) py -m pip install -r requirements.txt
+4) py RESET_BASE.py
+5) py mqtt_bridge.py
+6) En otra terminal:
+   py -m streamlit run dashboard.py --server.port 8502
